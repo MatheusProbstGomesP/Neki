@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../../services/axios';
 import './styles.css';
-
+import { Card } from 'primereact/card';
 
 
 
@@ -25,30 +25,22 @@ const Home = () => {
 
     return (
         <div className="container">
-            <div className="title">
-            <div style={{ marginLeft: 200 }}>LOGIN</div>
-            <div style={{ marginLeft: 400 }}>PASSWORD</div>
-            <div style={{ marginLeft: 350 }}>NAME</div>
-            <div style={{ marginLeft: 450 }}>VERSION</div>
-            </div>
+
             {user_skills.map((user_skill, key) => (
                 <div className="user" user_skill={user_skill.id}
                     key={key}>
+                    <Card title={user_skill.id} subTitle={user_skill.user.login}>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>LOGIN:</strong>
+                                {user_skill.user.login}</li>
+                            <li class="list-group-item"><strong>PASSWORD:</strong>{user_skill.user.password}</li>
+                            <li class="list-group-item"><strong>SKILL:</strong>{user_skill.skill.name}</li>
+                            <li class="list-group-item"><strong>NIVEL DE CONHECIMENTO:</strong>{user_skill.knowledge_level}</li>
+                            <li class="list-group-item"><strong>VERSÃO:</strong>{user_skill.skill.version}</li>
+                        </ul>
+                
 
-                    <div>
-                        {user_skill.user.login}
-                    </div>
-                    <div>
-                        {user_skill.user.password}
-                    </div>
-                    <div>
-                        {user_skill.skill.name}
-                    </div>
-                    <div>
-                        {user_skill.skill.version}
-                    </div>
-
-
+                    </Card>
                 </div>
 
             ))}

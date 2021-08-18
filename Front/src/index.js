@@ -7,6 +7,8 @@ import { BrowserRouter ,Switch, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro'
+import Skill from './pages/Skill'
+import User from './pages/User';
 
 import {Menu} from './components/Menu'
 
@@ -15,9 +17,11 @@ ReactDOM.render(
     <BrowserRouter >
     <Menu/>
       <Switch>
-        <Route path="/" component={Home} exact/>
         <Route path="/login" component={Login} exact/>  
+        <Route path="/" component={Home} exact/>
         <Route path="/cadastro" component={Cadastro} exact/> 
+        <Route path="/skill" component={Skill} exact/> 
+        <Route path="/user" component={User} exact/>
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,
