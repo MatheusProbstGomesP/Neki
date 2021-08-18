@@ -60,7 +60,7 @@ public class User_skillService {
 
     public List<User_skillVO> findAll() throws User_skillException {
         try {
-            List<User_skill> user_skills = user_skillRepository.findAll();
+            List<User_skill> user_skills = user_skillRepository.findAllByOrderByIdAsc();
             List<User_skillVO> user_skillVOS = new ArrayList<User_skillVO>();
             for (User_skill user_skill : user_skills) {
                 user_skillVOS.add(convertEntidadeParaVO(user_skill));

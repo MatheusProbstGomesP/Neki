@@ -3,13 +3,14 @@ package neki.teste_residencia.vo;
 import neki.teste_residencia.entities.Skill;
 import neki.teste_residencia.entities.User;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class User_skillVO {
 
     private Integer id;
     private Integer knowledge_level;
-    private Date created_at;
+    private LocalDate created_at;
     private Date updated_at;
     private Integer userId;
     private User user;
@@ -33,11 +34,11 @@ public class User_skillVO {
         this.knowledge_level = knowledge_level;
     }
 
-    public Date getCreated_at() {
+    public LocalDate getCreated_at() {
         return created_at;
     }
 
-    public void setCreated_at(Date created_at) {
+    public void setCreated_at(LocalDate created_at) {
         this.created_at = created_at;
     }
 

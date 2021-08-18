@@ -47,9 +47,9 @@ public class SkillService {
 
 
 
-    public List<SkillVO> findAll() throws SkillException {
+    public List<SkillVO> findAll( ) throws SkillException {
         try {
-            List<Skill> skills = skillRepository.findAll();
+            List<Skill> skills = skillRepository.findAllByOrderByIdAsc();
             List<SkillVO> skillVOS = new ArrayList<SkillVO>();
             for (Skill skill : skills) {
                 skillVOS.add(convertEntidadeParaVO(skill));

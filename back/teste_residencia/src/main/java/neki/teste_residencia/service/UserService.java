@@ -43,7 +43,7 @@ public class UserService {
 
     public List<UserVO> findAll() throws UserException {
         try {
-            List<User> users = userRepository.findAll();
+            List<User> users = userRepository.findAllByOrderByIdAsc();
             List<UserVO> userVOS = new ArrayList<UserVO>();
             for (User user : users) {
                 userVOS.add(convertEntidadeParaVO(user));

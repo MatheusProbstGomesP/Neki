@@ -3,6 +3,7 @@ package neki.teste_residencia.entities;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -18,7 +19,7 @@ public class User_skill {
 
     @JsonFormat(pattern = "dd-MM-yyyy")
     @Column(name = "created_at")
-    private Date created_at;
+    private LocalDate created_at;
 
     @Column(name = "updated_at")
     private Date updated_at;
@@ -49,11 +50,11 @@ public class User_skill {
         this.knowledge_level = knowledge_level;
     }
 
-    public Date getCreated_at() {
+    public LocalDate getCreated_at() {
         return created_at;
     }
 
-    public void setCreated_at(Date created_at) {
+    public void setCreated_at(LocalDate created_at) {
         this.created_at = created_at;
     }
 
