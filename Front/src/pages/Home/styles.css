@@ -1,0 +1,21 @@
+.container{
+    margin: auto;
+    
+}
+
+.user{
+    margin-top: 10px;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    
+}
+
+.title{
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 100px;
+    background-color:red;
+    border-radius: 100px;
+}
